@@ -1,28 +1,28 @@
-# Vue 3 + Vite
+## Configuración IDE recomendada
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+-  [ Código VS ] ( https://code.visualstudio.com/ ) + [ Volar ] ( https://marketplace.visualstudio.com/items?itemName=Vue.volar ) (y deshabilitar Vetur) + [ Complemento TypeScript Vue (Volar) ] ( https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin ) .
+# Levantado a nivel de desarrollo
+` npm ejecutar dev`
 
-## Recommended IDE Setup
+    - ejes: 1.5.1
+    - vista: 3.3.4
+    - nodo > 16
+    - viento de cola
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+# acoplador
 
+Construcción de la imagen de Docker, nombre de la imagen: dockerize-vuejs-app
+` docker build -t dockerize-vuejs-app. `
 
+Para correr la imagen
+` docker run -it -p 8080:8080 --rm --name dockerize-vuejs-app-1 dockerize-vuejs-app ` 
 
-#Documentacion tecnica
-
-Proyeacto realizado en vue 3 in vite
-
-##Docker
-para la construcción utilizar comando
-
-`docker build-t dockerize-vuejs-app`
-
-
-Para correr la imagen utilizando docker
-
-`docker run -it -p 8080:8080 --rm -name dockerize-vuejs-app-1 dockerize-vuejs-app`
-
-
+- ejecución de ventana acoplable: ejecuta un nuevo contenedor
+    - -it : abrir una sesión interactiva
+    - -p : indica que puerto será expuesto del contenedor hacia la maquina local
+    - --rm : borrar el contenedor después de que lo detengamos (para ahorrar espacio)
+    - --name : nombre que se le dará al contenedor
+    - imagen: imagen (dockerize-vuejs-app) que se va a construir en el contenedor (dockerize-vuejs-app-1)
 -docker run: ejecuta un nuevo contenedor
     - -it: abrir una sesión interactiva
     - -p: exponer los puertos del contenedor
